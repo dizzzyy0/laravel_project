@@ -32,11 +32,7 @@ class ProgrammingLanguageController extends Controller
                          ->with('success', 'Programming language created successfully!');
     }
 
-    public function show($id)
-    {
-        $programmingLanguage = ProgrammingLanguage::findOrFail($id);
-        return view('ProgrammingLanguage.show', compact('programmingLanguage')); 
-    }
+
 
     public function edit($id)
     {

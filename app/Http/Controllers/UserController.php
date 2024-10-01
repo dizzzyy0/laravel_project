@@ -34,12 +34,6 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('success', 'User created successfully!');
     }
 
-    public function show($id)
-    {
-        $user = User::findOrFail($id);
-        return view('user.show', compact('user'));
-    }
-
     public function edit($id)
     {
         $user = User::findOrFail($id);
